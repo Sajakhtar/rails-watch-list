@@ -3,8 +3,8 @@
     <div class="col-6 m-auto">
       <h1 class="text-center">Add a movie</h1>
       <%= simple_form_for [ @list, @bookmark ] do |f| %>
-        <%= f.input :comment %>
         <%= f.association :movie %>
+        <%= f.input :comment %>
         <%= f.submit "Add", class: "btn btn-secondary w-100" %>
       <% end %>
       <%= link_to 'Back', lists_path, class: 'btn btn-light w-100 mt-3 text-secondary border' %>

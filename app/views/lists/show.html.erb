@@ -35,4 +35,30 @@
       </div>
     <% end %>
   </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-8">
+      <h5>Reviews</h5>
+      <ul class="list-group mt-2">
+        <% @list.reviews.each do |review| %>
+          <li class="list-group-item d-flex justify-content-between">
+            <%= review.comment %>
+            <div>
+              <% review.rating.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-4">
+      <h5>Leave a review</h5>
+      <%= render 'reviews/form', reivew: @review %>
+    </div>
+  </div>
+
 </div>

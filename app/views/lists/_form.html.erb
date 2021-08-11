@@ -1,0 +1,14 @@
+<%= simple_form_for @list,
+  wrapper: :inline_form,
+  # html: { class: "row row-cols-lg-auto g-3 align-items-center justify-content-around" },
+  html: { class: "d-flex align-items-center justify-content-end" },
+  wrapper_mappings: {
+    boolean: :inline_boolean
+  } do |f| %>
+
+  <%= f.input :name %>
+  <%# <%= f.button :submit, class: "btn-primary" %>
+  <div class="ml-2">
+    <%= f.submit "Add a list", class: "btn btn-secondary ml-2" %>
+  </div>
+<% end %>

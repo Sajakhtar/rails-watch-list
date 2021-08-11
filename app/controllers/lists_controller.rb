@@ -3,10 +3,12 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
+    @list = List.new
   end
 
   def show
     @review = Review.new
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -20,6 +22,7 @@ class ListsController < ApplicationController
       redirect_to @list
     else
       render :new
+      # render lists_path # BROKEN
     end
   end
 

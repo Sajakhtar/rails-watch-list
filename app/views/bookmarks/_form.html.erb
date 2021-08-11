@@ -1,0 +1,15 @@
+<%= simple_form_for [ @list, @bookmark ],
+  wrapper: :inline_form,
+  # html: { class: "row row-cols-lg-auto g-3 align-items-center justify-content-around" },
+  html: { class: "d-flex align-items-center justify-content-around" },
+  wrapper_mappings: {
+    boolean: :inline_boolean
+  } do |f| %>
+
+  <%= f.association :movie %>
+  <%= f.input :comment, :input_html => {:rows => 1, class: "mx-2"} %>
+  <%# <%= f.button :submit, class: "btn-primary" %>
+  <div class="ml-2">
+    <%= f.submit "Add a movie", class: "btn btn-secondary ml-2" %>
+  </div>
+<% end %>

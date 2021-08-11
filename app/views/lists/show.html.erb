@@ -1,16 +1,26 @@
 <div class="list-banner">
   <div class="container">
-    <h1><%= @list.name %></h1>
+    <h1><%= @list.name.capitalize %></h1>
   </div>
 </div>
 
 <div class="container mt-3">
-  <div class="d-flex justify-content-between mb-3">
-    <h3>Movies in <%= @list.name %> list</h3>
-    <%= link_to new_list_bookmark_path(@list), class: 'btn btn-secondary d-flex justify-content-between align-items-center' do %>
-      <i class="fas fa-plus"></i>
-      <p class="mb-0 ml-2">Add Movie</p>
-    <% end %>
+
+  <%# <div class="d-flex justify-content-between mb-3"> %>
+    <%# <h3>Movies in <%= @list.name list</h3> %>
+    <%# <%= link_to new_list_bookmark_path(@list), class: 'btn btn-secondary d-flex justify-content-between align-items-center' do %>
+      <%# <i class="fas fa-plus"></i> %>
+      <%# <p class="mb-0 ml-2">Add Movie</p> %>
+    <%# <% end %>
+  <%# </div> %>
+
+  <div class="row my-3 align-items-center">
+    <div class="col-4">
+      <h3 class="m-0"><%= @list.name.capitalize %> list</h3>
+    </div>
+    <div class="col-8">
+      <%= render 'bookmarks/form', bookmark: @bookmark %>
+    </div>
   </div>
 
   <div class="cards">
@@ -44,7 +54,10 @@
       <ul class="list-group mt-2">
         <% @list.reviews.each do |review| %>
           <li class="list-group-item d-flex justify-content-between">
-            <%= review.comment %>
+            <div>
+              <%= review.comment %>
+              <small class="text-muted"><em>- <%= time_ago_in_words(review.created_at) %></em></small>
+            </div>
             <div>
               <% review.rating.times do %>
                 <i class="fas fa-star text-warning"></i>
@@ -55,9 +68,11 @@
       </ul>
     </div>
 
-    <div class="col-4 bg-white pt-3 shadow-sm">
-      <h5>Leave a review</h5>
-      <%= render 'reviews/form', reivew: @review %>
+    <div class="col-4">
+      <div class="bg-white p-3 shadow-sm">
+        <h5>Leave a review</h5>
+        <%= render 'reviews/form', reivew: @review %>
+      </div>
     </div>
   </div>
 

@@ -1,9 +1,23 @@
-<h1>Lists</h1>
-<%= link_to 'New list', new_list_path %>
+<div class="home-banner">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+  </div>
+</div>
 
-<% @lists.each do |list| %>
-  <p>
-    <%= link_to list.name , list %>
-    <%# <%= list.name %>
-  </p>
-<% end %>
+<div class="container mt-3">
+  <div class="d-flex justify-content-between mb-3">
+    <h3>My Lists</h3>
+    <%= link_to new_list_path, class: 'btn btn-secondary align-middle' do %>
+      <i class="fas fa-plus"></i>
+      New movie list
+    <% end %>
+  </div>
+
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1512149074996-e923ac45be6a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3300&q=80)">
+        <%= link_to list.name , list, class: 'text-white' %>
+      </div>
+    <% end %>
+  </div>
+</div>

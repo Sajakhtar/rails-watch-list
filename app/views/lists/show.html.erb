@@ -15,9 +15,9 @@
 
   <div class="cards">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="card-trip">
+      <div class="card-movie">
         <img src="<%= bookmark.movie.poster_url %>" />
-        <div class="card-trip-infos">
+        <div class="card-movie-infos">
           <div>
             <h2><%= bookmark.movie.title %></h2>
             <p><%= bookmark.movie.overview %></p>
@@ -25,11 +25,11 @@
             <p><i class="fas fa-quote-left"> </i> <%= bookmark.comment %> <i class="fas fa-quote-right"></i></p>
           </div>
           <div class="d-flex">
-            <h2 class="card-trip-pricing"><%= bookmark.movie.rating %></h2>
+            <h2 class="card-movie-rating"><%= bookmark.movie.rating %></h2>
             <i class="fas fa-star rating-star"></i>
           </div>
           <%= link_to  bookmark_path(bookmark), method: :delete do %>
-            <i class="far fa-trash-alt card-trip-user"></i>
+            <i class="far fa-trash-alt card-movie-delete"></i>
           <% end %>
         </div>
       </div>

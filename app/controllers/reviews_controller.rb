@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to @list
     else
-      render @list
+      render 'lists/show'
     end
   end
 

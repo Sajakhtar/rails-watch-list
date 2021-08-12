@@ -21,8 +21,8 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to @list
     else
-      render :new
-      # render lists_path # BROKEN
+      # render :new
+      render 'lists/show'
     end
   end
 

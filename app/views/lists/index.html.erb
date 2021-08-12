@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="cards mb-3">
+  <div class="cards mb-3" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-in-out">
     <% @lists.each do |list| %>
       <% unless list.image.attached? %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1512149074996-e923ac45be6a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3300&q=80)">

@@ -6,7 +6,10 @@
     boolean: :inline_boolean
   } do |f| %>
 
-  <%= f.input :name %>
+  <%= f.input :name, placeholder: "name" %>
+  <div class="ml-2 pb-0">
+    <%= f.input :image, as: :file, label: false%>
+  </div>
   <%# <%= f.button :submit, class: "btn-primary" %>
   <div class="ml-2">
     <%= f.submit "Add a list", class: "btn btn-secondary ml-2" %>

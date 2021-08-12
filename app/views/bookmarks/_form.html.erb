@@ -7,7 +7,7 @@
   } do |f| %>
 
   <%= f.association :movie %>
-  <%= f.input :comment, :input_html => {:rows => 1, class: "mx-2"} %>
+  <%= f.input :comment, placeholder: "comment" , :input_html => {:rows => 1, class: "mx-2"} %>
   <%# <%= f.button :submit, class: "btn-primary" %>
   <div class="ml-2">
     <%= f.submit "Add a movie", class: "btn btn-secondary ml-2" %>

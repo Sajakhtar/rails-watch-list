@@ -4,7 +4,9 @@
       <h1 class="text-center">Create a list</h1>
       <%= simple_form_for @list do |f| %>
         <%= f.input :name %>
-        <%= f.input :image, as: :file %>
+        <div class="mb-3">
+          <%= f.input :image, as: :file, class: "mb-3" %>
+        </div>
         <%= f.submit "Create", class: "btn btn-secondary w-100" %>
       <% end %>
       <%= link_to 'Back', root_path, class: 'btn btn-light w-100 mt-3 text-secondary border' %>

@@ -17,12 +17,13 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
+    @lists = List.all
 
     if @list.save
       redirect_to @list
     else
       # render :new
-      render 'lists/show'
+      render :index
     end
   end
 

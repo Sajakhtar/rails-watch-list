@@ -13,7 +13,7 @@ List.destroy_all
 Movie.destroy_all
 
 puts 'Creating movies from LeWagon TMBD API...'
-api_pages = [1, 2, 3]
+api_pages = [1, 2, 3, 4, 5]
 image_base = "https://image.tmdb.org/t/p/w500"
 
 api_pages.each do |page_number|

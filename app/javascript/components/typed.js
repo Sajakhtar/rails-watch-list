@@ -2,8 +2,8 @@ import Typed from 'typed.js';
 
 const typed = () => {
   const options = {
-    strings: ['Classis', 'Action', 'Indie', 'Comedy', 'Adventure'],
-    typeSpeed: 100,
+    strings: ['Classics', 'Action', 'Indie', 'Comedy', 'Adventure'],
+    typeSpeed: 150,
     startDelay: 500,
     loop: true
   };

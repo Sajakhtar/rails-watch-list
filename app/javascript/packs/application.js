@@ -8,7 +8,15 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap';
+import { barRating }  from 'components/bar_rating';
+import 'jquery-bar-rating/dist/themes/css-stars.css'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  barRating()
+});

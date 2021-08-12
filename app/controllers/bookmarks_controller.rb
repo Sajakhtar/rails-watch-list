@@ -13,9 +13,6 @@ class BookmarksController < ApplicationController
       redirect_to @list
     else
       # render :new
-      # render 'lists/show' # BROKEN
-      # render @list
-      # render lists_show_path
       render 'lists/show'
     end
   end

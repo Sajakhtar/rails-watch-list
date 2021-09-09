@@ -10,26 +10,22 @@
 ___
 ## About
 
+The movie watch list is a way to curate your own list of favorite movies and let others review your lists.
 
 
 It was developed in 1 day as the first rails applicatoin for batch #676 of the [Le Wagon](https://www.lewagon.com/) Web Development Bootcamp in Dubai.
 
-About a Space is a Ruby on Rails web app that uses a base template from [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon](https://www.lewagon.com) team.
+The movie watch list is a Ruby on Rails web app that uses a base template from [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon](https://www.lewagon.com) team.
 
 It was designed to be fully responsive.
 
 ___
 ## Features
 
-[About a space](https://about-a-space.herokuapp.com/) feature set currently consists of
-- User authentication and accounts
-- Search for spaces by keyword and/or dates
-- See search results and map with the location of the shortlisted spaces
-- See details about the space, including the description and reviews.
-  - book a space
-  - leave reviews for past bookings
-- See a dashboard of your bookings and spaces that you've listed
-  - list a space that you wish to rent out
+The movie watch list feature set currently consists of
+- Create a list
+- Add movies to that list
+- leave a review
 
 ___
 ## Screenshots
@@ -87,7 +83,6 @@ ___
 JavaScript Plugins
 - [Typed JS](https://mattboldt.com/demos/typed-js/)
 - [AOS](https://michalsnik.github.io/aos/)
-
 - [BarRating](https://antennaio.github.io/jquery-bar-rating/)
 
 APIs
